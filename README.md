@@ -8,6 +8,13 @@ This project demonstrates how to write **a single Python DataFrame logic** that 
 
 All powered by the excellent [Narwhals](https://github.com/narwhals-dev/narwhals) library — a lightweight abstraction for DataFrame interoperability.
 
+## 💡 Why Use Narwhals?
+
+* ✅ Write once, run across multiple engines
+* ✅ Easy migration from prototyping to distributed systems
+* ✅ Cleaner, engine-agnostic code
+* ✅ Ideal for teaching, notebooks, and flexible pipelines
+
 ---
 
 ## 🎯 Goal
@@ -16,7 +23,7 @@ Allow engineers and analysts to write **portable, reusable data transformation c
 
 ---
 
-## 📄 Files
+## 📁 Files
 
 | File                 | Description                             |
 | -------------------- | --------------------------------------- |
@@ -24,7 +31,7 @@ Allow engineers and analysts to write **portable, reusable data transformation c
 | `requirements.txt` | Python dependencies                     |
 | `.gitignore`       | Ignore `venv/`, caches, system files  |
 
-> PySpark version coming soon in `3-spark.py`
+> ✅ PySpark version coming soon in `3-spark.py`
 
 ---
 
@@ -36,4 +43,24 @@ Allow engineers and analysts to write **portable, reusable data transformation c
 - Sorts by age
 - Prints the result
 
-Output example:
+Example output:
+
+🔧 Engine: polars
+
+name  age  is_adult
+
+2  Carla   29     False
+
+1    Bob   35      True
+
+---
+
+## 🐍 Example Code (main.py)
+
+You can switch the engine directly from the command line:
+
+```bash
+python main.py --engine pandas
+python main.py --engine polars
+---
+```
