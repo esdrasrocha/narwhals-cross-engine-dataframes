@@ -1,52 +1,39 @@
 # 🐋 Narwhals Cross-Engine DataFrames
 
-This project demonstrates how to write **one single Python DataFrame logic** that runs seamlessly on:
+This project demonstrates how to write **a single Python DataFrame logic** that runs seamlessly on:
 
 - 🐼 **Pandas** (for local development)
-- ⚡ **Polars** (for performance)
-- 🔥 **PySpark** (for distributed processing)
+- ⚡ **Polars** (for high performance)
+- 🔥 **PySpark** (coming soon)
 
-All powered by the excellent [Narwhals](https://github.com/narwhals-dev/narwhals) library — a lightweight abstraction layer for DataFrame interoperability.
+All powered by the excellent [Narwhals](https://github.com/narwhals-dev/narwhals) library — a lightweight abstraction for DataFrame interoperability.
 
 ---
 
 ## 🎯 Goal
 
-Enable data engineers and analysts to write **reusable, engine-agnostic code** using a single syntax that works across different DataFrame frameworks — from prototyping to production.
+Allow engineers and analysts to write **portable, reusable data transformation code** that runs on multiple engines without rewriting logic.
 
 ---
 
-## 📄 Included Files
+## 📄 Files
 
-| File                 | Description                                               |
-| -------------------- | --------------------------------------------------------- |
-| `main.py`          | Example using Pandas with Narwhals                        |
-| `requirements.txt` | Python dependencies                                       |
-| `.gitignore`       | Prevents venv, cache, and system files from being tracked |
+| File                 | Description                             |
+| -------------------- | --------------------------------------- |
+| `main.py`          | Unified example using Pandas and Polars |
+| `requirements.txt` | Python dependencies                     |
+| `.gitignore`       | Ignore `venv/`, caches, system files  |
 
-> Coming soon: examples for Polars and PySpark
+> PySpark version coming soon in `3-spark.py`
 
 ---
 
-## 🚀 How to Run (Local with Pandas)
+## 🧠 What the Code Does
 
-```bash
-# Clone the repository
-git clone https://github.com/your-username/narwhals-cross-engine-dataframes.git
-cd narwhals-cross-engine-dataframes
+- Loads sample data with names and ages
+- Filters rows where `age > 25`
+- Adds a new column `is_adult` (True if age ≥ 30)
+- Sorts by age
+- Prints the result
 
-# Create a virtual environment
-python -m venv venv
-
-# Activate the environment
-# On Windows:
-.\venv\Scripts\activate
-# On macOS/Linux:
-source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the main script
-python main.py
-```
+Output example:
